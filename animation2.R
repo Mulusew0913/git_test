@@ -1,8 +1,8 @@
 library(ggplot2)
 library(gganimate)
 theme_set(theme_bw())
-
 library(gapminder)
+
 head(gapminder)
 
 p <- ggplot(
@@ -27,4 +27,3 @@ x <- rbind(simpsons_paradox, simpsons_paradox, simpsons_paradox)
 ggplot(data=x, aes(x=x,y=y, color=group)) + geom_point(show.legend = FALSE, alpha = 0.7) +
   scale_color_viridis_d() + scale_size(range = c(20, 20))
 
-lm(y ~ x + group, data = simpsons_paradox)
